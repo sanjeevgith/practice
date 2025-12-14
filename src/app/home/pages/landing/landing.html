@@ -4,8 +4,8 @@
     <div class="card-body">
       <h5 class="card-title">Card {{item.id}}</h5>
       <p class="card-text">{{item.title}}</p>
-        <button class="btn btn-secondary" (click)="removeTodo(item.id)">Remove</button>
-      <button (click)="openModal(item)" class="btn btn-primary">Description</button>
+        <button class="btn btn-danger" (click)="removeTodo(item.id)">Remove</button>
+      <button (click)="openModal(item)" class="btn btn-success">Description</button>
     </div>
   </div>
 }
