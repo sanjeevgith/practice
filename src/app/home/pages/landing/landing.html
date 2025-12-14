@@ -1,0 +1,23 @@
+
+@for (item of postDataResponse(); track item.id ?? $index) {
+  <div class="card" style="width: 18rem;" >
+    <div class="card-body">
+      <h5 class="card-title">Card {{item.id}}</h5>
+      <p class="card-text">{{item.title}}</p>
+        <button (click)="removeTodo(item.id)">Remove</button>
+      <button (click)="openModal(item)" class="btn btn-primary">Description</button>
+    </div>
+  </div>
+}
+@empty {
+  <p>Loading...</p>
+}
+<button (click)="goToLanding()">Go To AC Deatils</button>
+
+<app-popup
+  [isOpen]="modalOpen"
+  [title]="modalTitle"
+  [body]="modalBody"
+  (close)="closeModal()"
+  (save)="saveModal()">
+</app-popup>
