@@ -27,6 +27,10 @@ export class Landing implements OnInit {
     this.router.navigate(['account-details']);
   }
 
+  gotToHomeDashboard(){
+    this.router.navigate(['home-dashboard']);
+  }
+
 
   modalOpen = false;
   modalTitle = '';
