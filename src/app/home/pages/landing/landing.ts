@@ -2,11 +2,13 @@ import { Component, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { LandingService } from '../../services/landing-service';
 import { Popup } from "../popup/popup";
+import { CommonModule } from '@angular/common';
+
 
 
 @Component({
   selector: 'app-landing',
-  imports: [Popup],
+  imports: [Popup, CommonModule],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
 })

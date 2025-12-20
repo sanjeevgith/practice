@@ -16,4 +16,12 @@ import { Header } from "./pages/header/header";
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home {
+
+  homeData="Sanjeev";
+
+  headerfunctionCall(){
+    alert("home function from header call")
+  }
+
+}
