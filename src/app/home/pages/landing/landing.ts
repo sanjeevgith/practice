@@ -54,7 +54,8 @@ export class Landing implements OnInit {
     this.landingService.getPost().subscribe(({
       next: (res) => {
         console.log(res);
-        this.postDataResponse.set(res);
+        const limitedData = res.slice(0, 10); // ✅ only first 10
+        this.postDataResponse.set(limitedData);
         this.setPostdata(this.postDataResponse());
       },
       error(err) {
