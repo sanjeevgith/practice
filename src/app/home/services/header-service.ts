@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HeaderService {
 
-  private headerData  = new BehaviorSubject<any>([]);
+  private headerData  = new BehaviorSubject<[]>([]);
   headerData$ = this.headerData.asObservable();
 
 
